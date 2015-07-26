@@ -79,6 +79,18 @@ Array.prototype.slice
 
 # How to write a function
 
-Developer mathematician poet.
+Developer. Mathematician. Poet.
 
 > Prose for days.
+
+
+## Take your data last
+
+
+## Never Mutate
+
+
+## Do one thing well
+
+
+## Compose 
