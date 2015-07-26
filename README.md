@@ -84,13 +84,31 @@ Developer. Mathematician. Poet.
 > Prose for days.
 
 
-## Take your data last
+## Take the data last 
+
+```js
+const updateDog = (fn, dog) => /* ... */ 
+```
 
 
-## Never Mutate
+## Never mutate
+
+```js
+const updateDog = (updates, dog) => extend({}, dog, updates)
+```
 
 
 ## Do one thing well
 
 
-## Compose 
+```js
+const feedDog = dog => updateDog({isHungry: false}, dog)
+const walkDog = dog => updateDog({isTired: true}, dog)
+```
+
+
+## Compose
+
+```js
+const feedAndWalk = (dog) => walkDog(feedDog(dog))
+```
