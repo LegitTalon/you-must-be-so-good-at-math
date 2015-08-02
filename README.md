@@ -112,3 +112,93 @@ const walkDog = dog => updateDog({isTired: true}, dog)
 ```js
 const feedAndWalk = (dog) => walkDog(feedDog(dog))
 ```
+
+
+
+## Utilities
+
+ramda, lodash-fp
+
+> Be lazy, only write functions that aren't written and can't be derived via
+  composition.
+
+
+```js
+import {
+  compose,
+} from 'ramda'
+
+const dogApp = compose(
+  walkdog,
+  feedDog,
+  petDog,
+)
+
+dogApp({isHungry: true, isTired: false, isPetted: false})
+  // => {isHungry: false, isTired: true, isPetted: true}
+```
+> pipes on pipes on pipes 
+
+
+
+# Complex Data Structures
+
+No prob.
+
+
+## Lot's of things
+
+```js
+const dogs = [/* ... */]
+```
+
+
+```js
+const dogs = [/* ... */]
+
+dogs.map(dogApp) // => The dogs are all petted, fed and walked.
+```
+
+
+## Compositional failure
+
+```js
+const safeDivide = (x, y) => {
+  if (y === 0) return Maybe.Nothing()
+  else return Maybe.Just(x/y)
+}
+```
+
+
+```js
+const safeDivide = (x, y) => {
+  if (y === 0) return Either.Left('Can't divide by zero.')
+  else return Either.Right(x/y)
+}
+```
+
+
+## Understanding `map`
+
+```js
+dogs.map(dogApp) // =>[dogApp(/* dog */), dogApp(/* dog */), dogApp(/* dog */)]
+```
+
+
+```js
+maybeVal.map(fn) // => Maybe.Just(fn(val)) || Maybe.Nothing()
+```
+
+
+```js
+eitherVal.map(fn) // => Either.Right(fn(val)) || Either.Left(message)
+```
+
+
+```js
+promiseVal.then(fn) // => Promise.resolve(fn(val))
+```
+> Wait a minute.
+
+
+## Fantasy Land
