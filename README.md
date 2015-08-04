@@ -87,7 +87,7 @@ Developer. Mathematician. Poet.
 ## Take the data last 
 
 ```js
-const updateDog = (fn, dog) => /* ... */ 
+const updateDog = (updates, dog) => /* ... */ 
 ```
 
 
@@ -99,7 +99,6 @@ const updateDog = (updates, dog) => extend({}, dog, updates)
 
 
 ## Do one thing well
-
 
 ```js
 const feedDog = dog => updateDog({isHungry: false}, dog)
