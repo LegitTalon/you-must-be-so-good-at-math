@@ -67,7 +67,7 @@ Array.prototype.slice
 ```js
 +
 ```
-> Isn't that a binary operator? Nah friend, it's a pure function.
+> Isn't that a binary operator? Nah friend, it's a pure function kinda
 
 
 ## Purity gives us
@@ -162,11 +162,11 @@ dogs.map(dogApp) === [
 
 
 ```js
-maybeVal.map(fn) // => Maybe.Just(fn(val)) || Maybe.Nothing()
+maybeVal.map(fn)    // => Maybe.Just(fn(val))      || Maybe.Nothing()
 
-eitherVal.map(fn) // => Either.Right(fn(val)) || Either.Left(message)
+eitherVal.map(fn)   // => Either.Right(fn(val))    || Either.Left(message)
 
-promiseVal.then(fn) // => Promise.resolve(fn(val))
+promiseVal.then(fn) // => Promise.resolve(fn(val)) || Promise.catch(e)
 ```
 > lol @ promise good one js 
 
@@ -175,21 +175,20 @@ promiseVal.then(fn) // => Promise.resolve(fn(val))
 
 ```js
 const add = a => b => a + b
-const add1 = Just(1).map(add) // => Just(add1)
-add1.ap(4) // => Just(5)
+const add1 = Just(1).map(add) // => Just(add(1))
+add1.ap(add(1)(4)) // => Just(5)
 ```
 
 
 ## Examples
+> examples/fullName.js
 
 
 
 # Fantasy Land
+> https://github.com/fantasyland/fantasy-land
 
 
 
-# Let's get our hands dirty
-
-```js
-function StringPlus () {}
-```
+# DIY 
+> examples/StringPlus.js && examples/stringtastic.js
