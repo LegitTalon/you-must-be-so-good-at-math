@@ -143,7 +143,7 @@ dogApp({isHungry: true, isTired: false, isPetted: false})
 
 But I want to _do_ stuff.
 
-> Let' make purity do stuff.
+> Let's make purity do stuff.
 
 
 ## Understanding map
@@ -168,7 +168,8 @@ eitherVal.map(fn)   // => Either.Right(fn(val))    || Either.Left(message)
 
 promiseVal.then(fn) // => Promise.resolve(fn(val)) || Promise.catch(e)
 ```
-> lol @ promise good one js 
+> map applies a function to a value inside of a type
+  also lol @ promise good one js 
 
 
 ## Understanding ap
@@ -178,10 +179,11 @@ const add = a => b => a + b
 const add1 = Just(1).map(add) // => Just(add(1))
 add1.ap(add(1)(4)) // => Just(5)
 ```
+> ap applies the value inside of the type to the given argument
 
 
 ## Examples
-> examples/fullName.js
+> [examples/fullName.js][]
 
 
 
@@ -191,4 +193,4 @@ add1.ap(add(1)(4)) // => Just(5)
 
 
 # DIY 
-> examples/StringPlus.js && examples/stringtastic.js
+> [examples/StringPlus.js][] && [examples/stringtastic.js][]
