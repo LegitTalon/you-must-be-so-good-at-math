@@ -9,16 +9,6 @@ A Talk About Functional Programming (in JavaScript)
 
 
 
-## What is a monad?
-
-<span class="fragment">A monoid in the cateogory of endofunctors.</span>
-<span class="fragment">aka a burrito</span>
-<span class="fragment">duh.</span>
-
-> duh, duh. 
-
-
-
 ## How does a dev become a mathematician?
 
 ![img/math.gif](img/math.gif)
