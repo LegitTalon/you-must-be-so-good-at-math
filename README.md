@@ -4,7 +4,7 @@ A Talk About Functional Programming (in JavaScript)
 <a href='http://twitter.com/legittalon'>@legittalon</a>
 
 <a href='http://theghostin.me/you-must-be-so-good-at-math/#/'>
-  http://theghostin.me/you-must-be-so-good-at-math/
+  theghostin.me/you-must-be-so-good-at-math
 </a>
 
 
