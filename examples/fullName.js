@@ -26,7 +26,7 @@ const fullNameM = curry(3, (first, middle, last) =>
 )
 
 console.log(
-  fullNameM(Nothing('Phil'), Just(), Just('Poole'))
+  fullNameM(Nothing(), Just('R'), Just('Dickens'))
     .toString())
 // => Nothing 
 
