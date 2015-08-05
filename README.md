@@ -183,7 +183,7 @@ add1.ap(add(1)(4)) // => Just(5)
 
 
 ## Examples
-> [examples/fullName.js]()
+> [examples/fullName.js](examples/fullName.js)
 
 
 
@@ -193,4 +193,4 @@ add1.ap(add(1)(4)) // => Just(5)
 
 
 # DIY 
-> [/examples/StringPlus.js](/examples/StringPlus.js) && [/examples/stringtastic.js](/examples/stringtastic.js)
+> [examples/StringPlus.js](examples/StringPlus.js) && [examples/stringtastic.js](examples/stringtastic.js)
