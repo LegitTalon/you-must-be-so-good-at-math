@@ -21,6 +21,8 @@ A Talk About Functional Programming (in JavaScript)
 
 ## How does a dev become a mathematician?
 
+![img/math.gif](img/math.gif)
+
 <span class="fragment">Use pure functions.</span>
 
 > Functional programming is all derived from using only pure functions.
@@ -81,9 +83,9 @@ Array.prototype.slice
 
 
 
-# How to write a function
+## How to write a function
 
-Developer. Mathematician. Poet.
+![img/poet.gif](img/poet.gif)
 
 > Prose for days.
 
@@ -196,7 +198,8 @@ add1.ap(add(1)(4)) // => Just(5)
 
 
 
-# DIY 
+![img/hacker.gif](img/hacker.gif)
+
 > [examples/StringPlus.js](examples/StringPlus.js) && [examples/stringtastic.js](examples/stringtastic.js)
 
 
