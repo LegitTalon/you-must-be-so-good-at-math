@@ -113,7 +113,6 @@ const feedAndWalk = (dog) => walkDog(feedDog(dog))
 ```
 
 
-
 ## Utilities
 
 ramda, lodash-fp
@@ -159,30 +158,26 @@ dogs.map(dogApp) // => The dogs are all petted, fed and walked.
 ```
 
 
-## Compositional failure
-
-```js
-const safeDivide = (x, y) => {
-  if (y === 0) return Maybe.Nothing()
-  else return Maybe.Just(x/y)
-}
-```
-
-
-```js
-const safeDivide = (x, y) => {
-  if (y === 0) return Either.Left('Can't divide by zero.')
-  else return Either.Right(x/y)
-}
-```
-
 
 ## Understanding `map`
 
 ```js
-dogs.map(dogApp) // =>[dogApp(/* dog */), dogApp(/* dog */), dogApp(/* dog */)]
+dogs.map(dogApp) === [
+  dogApp(/* dog */),
+  dogApp(/* dog */),
+  dogApp(/* dog */)
+]
 ```
 
+
+
+## Compositional side-effects
+
+Examples
+
+
+
+## Modeling effects
 
 ```js
 maybeVal.map(fn) // => Maybe.Just(fn(val)) || Maybe.Nothing()
@@ -201,3 +196,11 @@ promiseVal.then(fn) // => Promise.resolve(fn(val))
 
 
 ## Fantasy Land
+
+
+
+# Your turn
+
+```js
+function StringPlus () {}
+```
