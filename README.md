@@ -1,4 +1,5 @@
 # "You Must Be So Good At Math!"
+
 A Talk About Functional Programming (in JavaScript)
 
 <a href='http://twitter.com/legittalon'>@legittalon</a>
@@ -8,10 +9,16 @@ A Talk About Functional Programming (in JavaScript)
 </a>
 
 
+## This is me
+
+![spooky](img/me.png)
+
+> Bridge the cyber-divide.
+
 
 ## How does a dev become a mathematician?
 
-![img/math.gif](img/math.gif)
+![mathematical!](img/math.gif)
 
 <span class="fragment">Use pure functions.</span>
 
@@ -75,9 +82,7 @@ Array.prototype.slice
 
 ## How to write a function
 
-![img/poet.gif](img/poet.gif)
-
-> Prose for days.
+![prose for days](img/poet.gif)
 
 
 ## Take the data last 
@@ -188,7 +193,7 @@ add1.ap(add(1)(4)) // => Just(5)
 
 
 
-![img/hacker.gif](img/hacker.gif)
+![h-core](img/hacker.gif)
 
 > [examples/StringPlus.js](examples/StringPlus.js) && [examples/stringtastic.js](examples/stringtastic.js)
 
