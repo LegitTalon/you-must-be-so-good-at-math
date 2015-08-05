@@ -205,6 +205,6 @@ add1.ap(add(1)(4)) // => Just(5)
 
 # Links
 
-- [Folktalke](https://github.com/folktale/folktale)
+- [Folktale](https://github.com/folktale/folktale)
 - [Hey Undescore, You're Doing It Wrong!](https://www.youtube.com/watch?v=m3svKOdZijA&feature=youtu.be)
 - [A Monad in Practicality: First-Class Failures](http://robotlolita.me/2013/12/08/a-monad-in-practicality-first-class-failures.html)
