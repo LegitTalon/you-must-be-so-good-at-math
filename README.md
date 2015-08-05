@@ -205,7 +205,7 @@ add1.ap(add(1)(4)) // => Just(5)
 
 <a href='http://twitter.com/legittalon'>@legittalon</a>
 
-[https://github.com/LegitTalon/you-must-be-so-good-at-math][]
+[https://github.com/LegitTalon/you-must-be-so-good-at-math](https://github.com/LegitTalon/you-must-be-so-good-at-math)
 
 
 
