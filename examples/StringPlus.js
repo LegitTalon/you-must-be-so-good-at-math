@@ -33,4 +33,6 @@ StringPlus.prototype.ap = function (b) {
   return new StringPlus(this.val(b.val))
 }
 
-StringPlus.prototype.toString = function () { `StringPlus(${this.val})` }
+StringPlus.prototype.toString = function () { return `StringPlus(${this.val})` }
+
+export default StringPlus

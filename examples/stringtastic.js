@@ -1,7 +1,28 @@
 import StringPlus from './StringPlus'
+import {
+  curry,
+} from 'core.lambda'
 
-const hello = StringPlus('hello world')
+const map = (fn, functor) => functor.map(fn)
 
-const exclaim = message => message + '!'
+/**
+ * Map
+ */
+const hello = new StringPlus('hello world')
 
-console.log(hello.map(exclaim).toString())
+const punctuate = curry(2, (punctuation, message) => message + punctuation)
+
+const exclaim = punctuate('!')
+
+console.log(map(exclaim, hello).toString())
+
+
+/**
+ * Apply
+ */
+const greet = curry(2, (nameA, nameB) => `"Hello ${nameB}!", said ${nameA}`)
+
+const rachel = new StringPlus('Rachel')
+const sara = new StringPlus('Sara')
+
+console.log(map(greet, rachel).ap(sara).toString())
