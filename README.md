@@ -109,7 +109,7 @@ const walkDog = dog => updateDog({isTired: true}, dog)
 ## Compose
 
 ```js
-const feedAndWalk = (dog) => walkDog(feedDog(dog))
+const feedAndWalk = dog => walkDog(feedDog(dog))
 ```
 
 
@@ -139,29 +139,20 @@ dogApp({isHungry: true, isTired: false, isPetted: false})
 
 
 
-# Complex Data Structures
+# Modeling effects
 
-No prob.
+But I want to _do_ stuff.
+
+> Let' make purity do stuff.
 
 
-## Lot's of things
-
-```js
-const dogs = [/* ... */]
-```
-
+## Understanding map
 
 ```js
 const dogs = [/* ... */]
 
-dogs.map(dogApp) // => The dogs are all petted, fed and walked.
-```
+dogs.map(dogApp) // => A description of the dogs: petted, fed and walked.
 
-
-
-## Understanding `map`
-
-```js
 dogs.map(dogApp) === [
   dogApp(/* dog */),
   dogApp(/* dog */),
@@ -169,15 +160,6 @@ dogs.map(dogApp) === [
 ]
 ```
 
-
-
-## Compositional side-effects
-
-Examples
-
-
-
-## Modeling effects
 
 ```js
 maybeVal.map(fn) // => Maybe.Just(fn(val)) || Maybe.Nothing()
@@ -195,7 +177,20 @@ promiseVal.then(fn) // => Promise.resolve(fn(val))
 > Wait a minute.
 
 
-## Fantasy Land
+## Understanding ap
+
+```js
+const add = a => b => a + b
+const add1 = Just(1).map(add) // => Just(add1)
+add1.ap(4) // => Just(5)
+```
+
+
+## Examples
+
+
+
+# Fantasy Land
 
 
 
