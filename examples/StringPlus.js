@@ -6,20 +6,6 @@ function StringPlus (val) {
 }
 
 /**
- * .chain
- */
-StringPlus.prototype.chain = function (f) {
-  return f(this.val)
-}
-
-/**
- * .of
- */
-StringPlus.prototype.of = function (a) {
-  return new StringPlus(a) 
-}
-
-/**
  * .map
  */
 StringPlus.prototype.map = function (f) {
@@ -33,6 +19,11 @@ StringPlus.prototype.ap = function (b) {
   return new StringPlus(this.val(b.val))
 }
 
-StringPlus.prototype.toString = function () { return `StringPlus(${this.val})` }
+/**
+ * .toString
+ */
+StringPlus.prototype.toString = function () {
+  return `StringPlus(${this.val})`
+}
 
-export default StringPlus
+export default a => new StringPlus(a)

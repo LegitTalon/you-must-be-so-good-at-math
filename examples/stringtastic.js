@@ -8,7 +8,7 @@ const map = (fn, functor) => functor.map(fn)
 /**
  * Map
  */
-const hello = new StringPlus('hello world')
+const hello = StringPlus('hello world')
 
 const punctuate = curry(2, (punctuation, message) => message + punctuation)
 
@@ -22,7 +22,7 @@ console.log(map(exclaim, hello).toString())
  */
 const greet = curry(2, (nameA, nameB) => `"Hello ${nameB}!", said ${nameA}`)
 
-const rachel = new StringPlus('Rachel')
-const sara = new StringPlus('Sara')
+const rachel = StringPlus('Rachel')
+const sara = StringPlus('Sara')
 
 console.log(map(greet, rachel).ap(sara).toString())

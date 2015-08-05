@@ -16,3 +16,5 @@ const map = (fn, functor) => functor.map(fn)
  *
  * Apply
  */
+
+// exclaimed

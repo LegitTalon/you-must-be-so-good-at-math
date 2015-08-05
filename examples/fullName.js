@@ -25,11 +25,17 @@ const fullNameM = curry(3, (first, middle, last) =>
     .ap(last)
 )
 
+/**
+ * Maybe
+ */
 console.log(
   fullNameM(Nothing(), Just('R'), Just('Dickens'))
     .toString())
 // => Nothing 
 
+/**
+ * Either 
+ */
 console.log(
   fullNameM(Right('Phil'), Left('Missing Middle Name'),  Right('Lopez'))
     .toString())

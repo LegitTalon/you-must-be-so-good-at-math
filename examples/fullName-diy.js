@@ -1,16 +1,18 @@
-import {
-  curry,
-} from 'core.lambda'
+/**
+ * Initial
+ */
 
-import {
-  Just,
-  Nothing,
-} from 'data.maybe'
+/**
+ * fullName
+ */
 
-import {
-  Left,
-  Right,
-} from 'data.either'
+/**
+ * fullNameMaybe
+ */
 
-const map = (fn, functor) => functor.map(fn)
-const initial = string => string.split('')[0]
+/**
+ * Maybe example
+ */
+
+
+// Either magic
