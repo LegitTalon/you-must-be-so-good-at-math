@@ -156,25 +156,19 @@ dogs.map(dogApp) // => A description of the dogs: petted, fed and walked.
 dogs.map(dogApp) === [
   dogApp(/* dog */),
   dogApp(/* dog */),
-  dogApp(/* dog */)
+  dogApp(/* dog */),
 ]
 ```
 
 
 ```js
 maybeVal.map(fn) // => Maybe.Just(fn(val)) || Maybe.Nothing()
-```
 
-
-```js
 eitherVal.map(fn) // => Either.Right(fn(val)) || Either.Left(message)
-```
 
-
-```js
 promiseVal.then(fn) // => Promise.resolve(fn(val))
 ```
-> Wait a minute.
+> lol @ promise good one js 
 
 
 ## Understanding ap
@@ -194,7 +188,7 @@ add1.ap(4) // => Just(5)
 
 
 
-# Your turn
+# Let's get our hands dirty
 
 ```js
 function StringPlus () {}
