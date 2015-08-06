@@ -151,8 +151,6 @@ But I want to _do_ stuff.
 ```js
 const dogs = [/* ... */]
 
-dogs.map(dogApp) // => A description of the dogs: petted, fed and walked.
-
 dogs.map(dogApp) === [
   dogApp(/* dog */),
   dogApp(/* dog */),
@@ -162,11 +160,11 @@ dogs.map(dogApp) === [
 
 
 ```js
-maybeVal.map(fn)    // => Maybe.Just(fn(val))      || Maybe.Nothing()
+maybeVal.map(fn)    // => Maybe.Just(fn(val))
 
-eitherVal.map(fn)   // => Either.Right(fn(val))    || Either.Left(message)
+eitherVal.map(fn)   // => Either.Right(fn(val))
 
-promiseVal.then(fn) // => Promise.resolve(fn(val)) || Promise.catch(e)
+promiseVal.then(fn) // => Promise.resolve(fn(val))
 ```
 > map applies a function to a value inside of a type
   also lol @ promise good one js 
@@ -176,25 +174,19 @@ promiseVal.then(fn) // => Promise.resolve(fn(val)) || Promise.catch(e)
 
 ```js
 const add = a => b => a + b
-const add1 = Just(1).map(add) // => Just(add(1))
-add1.ap(add(1)(4)) // => Just(5)
+
+Just(1)
+  .map(add) // => Just(add(1))    === Just(b => 1 + b)
+  .ap(4)    // => Just(add(1)(4)) === Just(1 + 4)
 ```
-> ap applies the value inside of the type to the given argument
-
-
-## Examples
-> [examples/fullName.js](examples/fullName.js)
-
-
-
-# Fantasy Land
-> https://github.com/fantasyland/fantasy-land
+> ap applies the function inside of the type to the given argument
 
 
 
 ![h-core](img/hacker.gif)
 
-> [examples/StringPlus.js](examples/StringPlus.js) && [examples/stringtastic.js](examples/stringtastic.js)
+> [examples/fullName.js](examples/fullName.js)
+  [examples/StringPlus.js](examples/StringPlus.js) && [examples/stringtastic.js](examples/stringtastic.js)
 
 
 
@@ -209,5 +201,6 @@ add1.ap(add(1)(4)) // => Just(5)
 # Links
 
 - [Folktale](https://github.com/folktale/folktale)
+- [Fantasy Land](https://github.com/fantasyland/fantasy-land)
 - [Hey Undescore, You're Doing It Wrong!](https://www.youtube.com/watch?v=m3svKOdZijA&feature=youtu.be)
 - [A Monad in Practicality: First-Class Failures](http://robotlolita.me/2013/12/08/a-monad-in-practicality-first-class-failures.html)
