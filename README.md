@@ -14,6 +14,7 @@ A Talk About Functional Programming (in JavaScript)
 > Bridge the cyber-divide.
 
 
+
 ## How does a dev become a mathematician?
 
 ![mathematical!](img/math.gif)
